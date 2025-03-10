@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copiar IBAN</title>
+    <script>
+        function copiarIBAN() {
+            const iban = "ES1314650100912058200019";  // Reemplaza con tu IBAN
+            navigator.clipboard.writeText(iban).then(() => {
+                alert("IBAN copiado al portapapeles: " + iban);
+            }).catch(err => {
+                alert("Error al copiar el IBAN. Intenta manualmente.");
+            });
+        }
+    </script>
+</head>
+<body onload="copiarIBAN()">
+    <h1>El IBAN ha sido copiado al portapapeles.</h1>
+    <p>Si no fue así, por favor cópialo manualmente: <strong>ES1314650100912058200019</strong></p>
+</body>
+</html>
